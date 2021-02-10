@@ -53,7 +53,11 @@ QSet<QString> ModulesQt513::onlyC(const QString &distDir) const
                     "./" + distDir + "/TestOnlyC.exe",
                     "./" + distDir + "/TestOnlyC.bat",
                     "./" + distDir + "/qt.conf",
+#if defined(Q_OS_WIN64)
                     "./" + distDir + "/libgcc_s_seh-1.dll",
+#else
+                    "./" + distDir + "/libgcc_s_dw2-1.dll",
+#endif
                     "./" + distDir + "/libstdc++-6.dll",
                     "./" + distDir + "/libwinpthread-1.dll",
                 }
@@ -234,7 +238,11 @@ QSet<QString> ModulesQt513::qmlLibs(const QString &distDir) const {
                     "./" + distDir + "/Qt5Widgets.dll",
                     "./" + distDir + "/TestQMLWidgets.exe",
                     "./" + distDir + "/TestQMLWidgets.bat",
+#if defined(Q_OS_WIN64)
                     "./" + distDir + "/libgcc_s_seh-1.dll",
+#else
+                    "./" + distDir + "/libgcc_s_dw2-1.dll",
+#endif
                     "./" + distDir + "/libstdc++-6.dll",
                     "./" + distDir + "/libwinpthread-1.dll",
                     "./" + distDir + "/plugins/bearer/qgenericbearer.dll",
@@ -1283,7 +1291,11 @@ QSet<QString> ModulesQt513::testDistroLibs(const QString &distDir) const {
                     "./" + distDir + "/lolLib/Qt5Gui.dll",
                     "./" + distDir + "/lolLib/Qt5Svg.dll",
                     "./" + distDir + "/lolLib/Qt5Widgets.dll",
+#if defined(Q_OS_WIN64)
                     "./" + distDir + "/lolLib/libgcc_s_seh-1.dll",
+#else
+                    "./" + distDir + "/lolLib/libgcc_s_dw2-1.dll",
+#endif
                     "./" + distDir + "/lolLib/libstdc++-6.dll",
                     "./" + distDir + "/lolLib/libwinpthread-1.dll",
                     "./" + distDir + "/lolTr/qtbase_ar.qm",
@@ -1325,7 +1337,11 @@ QSet<QString> ModulesQt513::testDistroLibs(const QString &distDir) const {
                     "./" + distDir + "/p/styles/qwindowsvistastyle.dll",
                     "./" + distDir + "/package1/TestOnlyC.exe",
                     "./" + distDir + "/package1/TestOnlyC.bat",
+#if defined(Q_OS_WIN64)
                     "./" + distDir + "/package1/libgcc_s_seh-1.dll",
+#else
+                    "./" + distDir + "/package1/libgcc_s_dw2-1.dll",
+#endif
                     "./" + distDir + "/package1/libstdc++-6.dll",
                     "./" + distDir + "/package1/libwinpthread-1.dll",
                     "./" + distDir + "/package1/qt.conf",
@@ -1343,7 +1359,11 @@ QSet<QString> ModulesQt513::testDistroLibs(const QString &distDir) const {
                     "./" + distDir + "/package2/ZzZ/Qt5Widgets.dll",
                     "./" + distDir + "/package2/ZzZ/TestQMLWidgets.exe",
                     "./" + distDir + "/package2/ZzZ/TestQMLWidgets.bat",
+#if defined(Q_OS_WIN64)
                     "./" + distDir + "/package2/ZzZ/libgcc_s_seh-1.dll",
+#else
+                    "./" + distDir + "/package2/ZzZ/libgcc_s_dw2-1.dll",
+#endif
                     "./" + distDir + "/package2/ZzZ/libstdc++-6.dll",
                     "./" + distDir + "/package2/ZzZ/libwinpthread-1.dll",
                     "./" + distDir + "/package2/ZzZ/plugins/bearer/qgenericbearer.dll",
@@ -2547,7 +2567,11 @@ QSet<QString> ModulesQt513::testOutLibs(const QString &distDir) const {
                     "./" + distDir + "/lolLib/Qt5QuickTemplates2.dll",
                     "./" + distDir + "/lolLib/Qt5Svg.dll",
                     "./" + distDir + "/lolLib/Qt5Widgets.dll",
+#if defined(Q_OS_WIN64)
                     "./" + distDir + "/lolLib/libgcc_s_seh-1.dll",
+#else
+                    "./" + distDir + "/lolLib/libgcc_s_dw2-1.dll",
+#endif
                     "./" + distDir + "/lolLib/libstdc++-6.dll",
                     "./" + distDir + "/lolLib/libwinpthread-1.dll",
                     "./" + distDir + "/lolTr/qtbase_ar.qm",
