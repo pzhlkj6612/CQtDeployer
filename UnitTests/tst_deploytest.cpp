@@ -2594,6 +2594,10 @@ void deploytest::testSystemLib() {
                     "./" + DISTRO_DIR + "/systemLibs/msvcp_win.dll",
                     "./" + DISTRO_DIR + "/systemLibs/wtsapi32.dll",
                     "./" + DISTRO_DIR + "/systemLibs/combase.dll",
+#if !defined(Q_OS_WIN64)
+                    "./" + DISTRO_DIR + "/systemLibs/sspicli.dll",
+                    "./" + DISTRO_DIR + "/systemLibs/cryptbase.dll",
+#endif
 
                 });
 
