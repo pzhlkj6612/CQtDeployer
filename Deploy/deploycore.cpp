@@ -647,6 +647,7 @@ QStringList DeployCore::Qt3rdpartyLibs(Platform platform) {
 
                   // gcc runtime libs ow mingw
                   "libgcc_s_seh",
+                  "libgcc_s_dw2",
                   "libstdc++",
                   "libwinpthread",
 
